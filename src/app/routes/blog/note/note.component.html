@@ -1,3 +1,21 @@
-<p>
-  note works!
-</p>
+<div class="content">
+  <div class="note-title">
+    <h1> {{note.title}} </h1>
+    <div class="note-btn">
+      <div>
+        <em>{{note.creationTime}}</em>
+        <i class="anticon anticon-eye"></i>{{note.scan}}
+        <i class="anticon anticon-heart"></i> {{note.like}}
+      </div>
+    </div>
+  </div>
+  <article  [innerHTML]="note.content"></article>
+  <div *ngIf="loading" class="load">
+    <nz-spin></nz-spin>
+  </div>
+  <div style="margin: auto;padding: 50px 10px;">
+    <div class="like" [ngClass]="{'liked':_like}" (click)="ILike()">
+      <i class="anticon anticon-heart-o"></i>喜欢 | {{note.like}}
+    </div>
+  </div>
+</div>
