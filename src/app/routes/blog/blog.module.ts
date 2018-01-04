@@ -10,8 +10,8 @@ import { FormsModule } from '@angular/forms';
 // 定义的路由
 const routes: Routes = [
   { path: '', redirectTo: 'list' },
-  { path: 'list', component: NoteListComponent },
-  { path: 'note/:id', component: NoteComponent }
+  { path: 'list', component: NoteListComponent, data: { state: 'list' } },
+  { path: 'note/:id', component: NoteComponent ,data: { state: 'note' } }
 ];
 
 @NgModule({

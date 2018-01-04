@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import marked from 'marked';
-import {BlogService, PreNoteDto,GetNoteDto} from "../blog.service"
+import {BlogService, PreNoteDto,GetNoteDto} from "../blog.service";
+import {Float} from "../../../share/animations"
 
 @Component({
   selector: 'app-note-list',
   templateUrl: './note-list.component.html',
-  styleUrls: ['./note-list.component.css']
+  styleUrls: ['./note-list.component.css'],
+  animations: [ Float ]
 })
 export class NoteListComponent implements OnInit {
   preNoteList:PreNoteDto[]=[];
@@ -19,7 +21,7 @@ export class NoteListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getNoteList();
+    this.getNoteList(true);
   }
   getNoteList(f=false){
     this.loading= true;
@@ -30,11 +32,11 @@ export class NoteListComponent implements OnInit {
     this.blogService.GetNoteList(param).do(()=>{
       this.loading = false;
     }).subscribe(m=> {
-      this.loadMore = m.totalCount>this.preNoteList.length;
       m.items.forEach((v,i)=>{
         v.content = marked(v.content);
         this.preNoteList.push(v);
       });
+      this.loadMore = m.totalCount>this.preNoteList.length;
     });
   }
   linkTo(id:number){

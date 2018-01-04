@@ -15,4 +15,13 @@
 .header{
   height: 66px;
   border-bottom: 1px solid #e9e9e9;
+  background-color: white;
+}
+.ant-menu-item-selected{
+  color: rebeccapurple !important;
+  border-bottom-color:  rebeccapurple!important;
+}
+.top-menu ul li:hover{
+  color: rebeccapurple !important;
+  border-bottom-color:  rebeccapurple!important;
 }

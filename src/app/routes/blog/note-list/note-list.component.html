@@ -3,10 +3,10 @@
     <nz-input [nzType]="'search'"  [(ngModel)]="key" [nzPlaceHolder]="'输入你想知道的'" style="height: 38px;"></nz-input>
   </div>
   <div>
-    <div *ngFor="let note of preNoteList" class="note-list">
+    <div *ngFor="let note of preNoteList" class="note-list" [@Float]="">
       <div class="note-title">
         <h1> <a (click)="linkTo(note.id)">{{note.title}}</a> </h1>
-        <em>{{note.creationTime}}</em>
+        <em class="date">{{note.creationTime}}</em>
       </div>
       <article  [innerHTML]="note.content"></article>
       <div class="note-btn">
