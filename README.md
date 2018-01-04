@@ -2,6 +2,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 ## 预览
 ![简单实现](http://upload-images.jianshu.io/upload_images/4810784-86cbe6fa5542e723.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 ![加入动画效果](http://upload-images.jianshu.io/upload_images/4810784-4238780de05f6d3c.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ## Development server
 
