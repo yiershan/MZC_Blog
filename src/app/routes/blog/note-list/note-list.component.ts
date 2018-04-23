@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import marked from 'marked';
 import {BlogService, PreNoteDto,GetNoteDto} from "../blog.service";
-import {Float} from "../../../share/animations"
+import {Float} from "../../../share/animations";
+
 
 @Component({
   selector: 'app-note-list',

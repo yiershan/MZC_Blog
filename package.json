@@ -25,6 +25,7 @@
     "@angular/router": "^5.0.2",
     "core-js": "^2.4.1",
     "marked": "^0.3.6",
+    "mzc-ng-api": "^2.1.1",
     "ng-zorro-antd": "^0.6.0",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
